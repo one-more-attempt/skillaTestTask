@@ -1,4 +1,5 @@
 import { useGetCallsMutation, useGetCallRecordMutation } from "./api/endpoints";
+import { TableRow } from "./components/tableRow/table-row";
 
 export const useGetData = () => {
   const [
@@ -26,15 +27,17 @@ export const useGetData = () => {
 };
 
 export const App = () => {
-  const {
-    handleLoadAudio,
-    isGetCallRecordLoading,
-    isGetCallRecordError,
-    callRecordData,
-  } = useGetData();
+  // const {
+  //   handleLoadAudio,
+  //   isGetCallRecordLoading,
+  //   isGetCallRecordError,
+  //   callRecordData,
+  // } = useGetData();
+
   return (
     <>
-      <div>
+      <TableRow />
+      {/* <div>
         <button onClick={handleLoadAudio} disabled={isGetCallRecordLoading}>
           {isGetCallRecordLoading ? "Загрузка..." : "Загрузить аудио"}
         </button>
@@ -45,7 +48,7 @@ export const App = () => {
             Ваш браузер не поддерживает элемент <code>audio</code>.
           </audio>
         )}
-      </div>
+      </div> */}
     </>
   );
 };

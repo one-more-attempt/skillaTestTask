@@ -1,0 +1,61 @@
+@import "../../styles/colors.scss";
+
+.mainWrapper {
+  background-color: $main-bg;
+  min-height: 100vw;
+  padding: 80px 0px;
+}
+.tableWrapper {
+  width: 1440px;
+  margin: 0 auto;
+  border-radius: 8px;
+  background-color: $table-bg;
+  box-shadow: 0px 4px 5px 0px $table-shadow;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin: 0px 40px;
+  gap: 30px;
+  padding: 12px 0px;
+  font-size: 15px;
+  border-top: 1px solid $row-divider;
+  color: $text-primary;
+}
+
+.callType {
+  border: 1px dotted black;
+  width: 24px;
+}
+
+.time {
+  width: 58px;
+  border: 1px dotted black;
+}
+
+.avatar {
+  width: 100px;
+  border: 1px dotted black;
+}
+
+.call {
+  width: 295px;
+  border: 1px dotted black;
+  
+}
+.source {
+  width: 185px;
+  border: 1px dotted black;
+  color: $text-secondary;
+}
+.rating {
+  width: 430px;
+  border: 1px dotted black;
+}
+.duration {
+  width: 86px;
+  border: 1px dotted black;
+  text-align: right;
+  margin-right: 0px;
+}
