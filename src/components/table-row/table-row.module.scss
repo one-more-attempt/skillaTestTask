@@ -1,0 +1,46 @@
+@import "../../styles/colors.scss";
+
+.row {
+  border-top: 1px solid $row-divider;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 65px;
+  gap: 30px;
+  font-size: 15px;
+  color: $text-primary;
+  font-size: 14px;
+  &:hover {
+    background-color: $row-hover;
+  }
+}
+.callType {
+  width: 24px;
+  display: flex;
+  justify-content: center;
+  img {
+    width: 12px;
+    height: 12px;
+  }
+}
+.time {
+  width: 58px;
+}
+.employee {
+  width: 100px;
+}
+.call {
+  width: 295px;
+}
+.source {
+  width: 185px;
+  color: $text-secondary;
+}
+.rating {
+  width: 430px;
+}
+.duration {
+  width: 86px;
+  text-align: right;
+  margin-right: 0px;
+}

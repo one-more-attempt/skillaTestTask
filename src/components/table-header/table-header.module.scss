@@ -1,0 +1,13 @@
+@import "../../styles/colors.scss";
+@import "../table-row/table-row.module.scss";
+
+.row {
+  font-size: 14px;
+  color: $text-secondary;
+  &:hover {
+    background-color: inherit;
+  }
+  .callType {
+    justify-content: left;
+  }
+}

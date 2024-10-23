@@ -1,0 +1,27 @@
+@import "../../styles/colors.scss";
+
+.avatar {
+  display: flex;
+  img {
+    object-fit: cover;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.noAvatar {
+  background-color: $avatar-background;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+  }
+}

@@ -19,5 +19,10 @@ export const Rating: FC<Props> = ({ type }: Props) => {
     [styles.good]: type === "good",
     [styles.error]: type === "error",
   });
-  return <div className={ratingStyle}>{ratingTypes[type]}</div>;
+
+  return (
+    <div className={ratingStyle}>
+      <span>{ratingTypes[type]}</span>
+    </div>
+  );
 };

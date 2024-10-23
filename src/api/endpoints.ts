@@ -1,9 +1,10 @@
+import { Calls } from "../types/api-types";
 import { skillaAPI } from "./api";
 import { API } from "./api-url";
 
 const getCalls = skillaAPI.injectEndpoints({
   endpoints: (builder) => ({
-    getCalls: builder.mutation<any, void>({
+    getCalls: builder.mutation<Calls, void>({
       query: () => ({
         url: API.getCalls,
         method: "POST",

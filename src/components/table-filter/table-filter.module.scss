@@ -1,0 +1,41 @@
+@import "../../styles/colors.scss";
+
+.filterRow {
+  width: 1440px;
+  margin: 0 auto;
+  height: 24px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: $text-secondary;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+
+  .typeFilterContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .dateFilterContainer {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    img {
+      width: 7px;
+      height: 10px;
+    }
+    .calendar {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      img {
+        width: 16px;
+        height: 18px;
+      }
+    }
+  }
+
+  .selected {
+  }
+}
