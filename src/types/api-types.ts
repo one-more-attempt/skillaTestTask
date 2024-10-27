@@ -10,10 +10,10 @@ export type Call = {
   source: string;
   to_number: string;
   person_avatar: string;
+  record: string;
 };
 
 export type Calls = {
   results: Call[];
   total_rows: string;
 };
-

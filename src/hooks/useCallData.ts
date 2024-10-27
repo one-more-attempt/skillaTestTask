@@ -3,10 +3,12 @@ import {
   CallRatingValues,
   CallStatusValues,
   CallTypeValues,
-} from "../../constants";
-import { Call } from "../../types/api-types";
+} from "../constants";
+import { Call } from "../types/api-types";
+import { useMemo, useState } from "react";
+import { useGetCallRecordMutation } from "../api/endpoints";
 
-export const useNormalizeCallData = (callData: Call) => {
+export const useCallData = (callData: Call) => {
   const {
     time,
     date,
@@ -16,7 +18,20 @@ export const useNormalizeCallData = (callData: Call) => {
     to_number,
     person_avatar: avatar,
     source,
+    record,
   } = callData;
+  const [getCallRecordTrigger, { data: callRecordData }] =
+    useGetCallRecordMutation();
+  const [isDownloaded, setisDownloaded] = useState(false);
+
+  const deleteRecordFromCache = () => {
+    // setisDownloaded(false);
+    //clear data from storage
+  };
+  const downloadCallRecord = () => {
+    //if successfully downloaded
+    getCallRecordTrigger().then((res) => setisDownloaded(true));
+  };
   const callDuration =
     status === CallStatusValues.Success
       ? moment
@@ -40,8 +55,12 @@ export const useNormalizeCallData = (callData: Call) => {
   const callNumber = in_out === 1 ? from_number : to_number;
   //has no rating value in the API, so it is randomly generated to match the design of the Figma layout
   const posibleRatingTypes = Object.values(CallRatingValues);
-  const rating =
-    posibleRatingTypes[Math.floor(Math.random() * posibleRatingTypes.length)];
+  const rating = useMemo(
+    () =>
+      posibleRatingTypes[Math.floor(Math.random() * posibleRatingTypes.length)],
+    []
+  );
+
   return {
     callType,
     callNumber,
@@ -50,5 +69,11 @@ export const useNormalizeCallData = (callData: Call) => {
     rating,
     source,
     avatar,
+    record,
+    callRecordData,
+    downloadCallRecord,
+    isDownloaded,
+    setisDownloaded,
+    deleteRecordFromCache
   };
 };

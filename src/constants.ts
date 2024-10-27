@@ -9,8 +9,8 @@ export enum CallTypeValues {
   Failed = "failed",
 }
 export enum CallRatingValues {
-  Perfect = "perfect",
-  Good = "good",
-  Bad = "bad",
-  Error = "error",
+  Perfect = "Отлично",
+  Good = "Хорошо",
+  Bad = "Плохо",
+  Error = "Скрипт не использован",
 }

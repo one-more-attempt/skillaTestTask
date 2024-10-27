@@ -1,28 +1,23 @@
 import { FC } from "react";
 import styles from "./rating.module.scss";
 import cn from "classnames";
+import { CallRatingValues } from "../../constants";
 
 type Props = {
-  type: "perfect" | "good" | "bad" | "error";
+  type: CallRatingValues;
 };
 
 export const Rating: FC<Props> = ({ type }: Props) => {
-  const ratingTypes = {
-    perfect: "Отлично",
-    good: "Хорошо",
-    bad: "Плохо",
-    error: "Скрипт не использован",
-  };
   const ratingStyle = cn(styles.mainRatingWrapper, {
-    [styles.perfect]: type === "perfect",
-    [styles.bad]: type === "bad",
-    [styles.good]: type === "good",
-    [styles.error]: type === "error",
+    [styles.perfect]: type === CallRatingValues.Perfect,
+    [styles.bad]: type === CallRatingValues.Bad,
+    [styles.good]: type === CallRatingValues.Good,
+    [styles.error]: type === CallRatingValues.Error,
   });
 
   return (
     <div className={ratingStyle}>
-      <span>{ratingTypes[type]}</span>
+      <span>{type}</span>
     </div>
   );
 };

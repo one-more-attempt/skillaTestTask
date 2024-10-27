@@ -1,26 +1,37 @@
+//main
+$white: #ffffff;
 $main-bg: #f1f4f9;
 
-$table-shadow: #e9edf3;
-$table-bg: #ffffff;
+//table
 
+$table-shadow: #e9edf3;
+$table-bg: $white;
 $row-divider: #eaf0fa;
 $row-hover: rgba(212, 223, 243, 0.17);
 
+//text
 $text-primary: #122945;
 $text-secondary: #5e7793;
-
 $text-rating-perfect: #00a775;
 $text-rating-bad: #ea1a4f;
-$text-rating-good: $text-primary;
+$text-rating-good: #122945;
 
+//rating
 $rating-perfect-bg: #dbf8ef;
 $rating-bad-bg: #fee9ef;
 $rating-good-bg: #d8e4fb;
-
-$rating-perfect-border: $text-rating-perfect;
-$rating-bad-border: $text-rating-bad;
+$rating-perfect-border: #00a775;
+$rating-bad-border: #ea1a4f;
 $rating-good-border: #adbfdf;
 
-$avatar-background: $row-divider;
+$no-avatar-bg: $row-divider;
 
+//player
+$player-bg: $row-divider;
+$player-btn-hover: #002cfb;
+$player-progress-bar-time-elapsed: #002cfb;
+$player-progress-bar-time-remaining: #adbfdf;
+$player-play-pause-btn-bg: $white;
+
+//filters
 $selected-filter: #015ef5;
