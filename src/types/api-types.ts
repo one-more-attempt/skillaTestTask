@@ -11,9 +11,15 @@ export type Call = {
   to_number: string;
   person_avatar: string;
   record: string;
+  partnership_id: string;
 };
 
 export type Calls = {
   results: Call[];
   total_rows: string;
+};
+
+export type GetCallRecordParams = {
+  record: string;
+  partnership_id: string;
 };

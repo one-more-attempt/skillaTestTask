@@ -19,18 +19,27 @@ export const useCallData = (callData: Call) => {
     person_avatar: avatar,
     source,
     record,
+    partnership_id,
   } = callData;
-  const [getCallRecordTrigger, { data: callRecordData }] =
-    useGetCallRecordMutation();
-  const [isDownloaded, setisDownloaded] = useState(false);
+  const [
+    getRecordTrigger,
+    {
+      data: recordDataLocalURL,
+      reset: resetGetRecordMutationCache,
+      isSuccess: isRecordDownloaded,
+    },
+  ] = useGetCallRecordMutation();
+  // const [isRecordDownloaded, setIsRecordDownloaded] = useState(false);
 
   const deleteRecordFromCache = () => {
-    // setisDownloaded(false);
+    resetGetRecordMutationCache();
     //clear data from storage
+    // setIsRecordDownloaded(false);
   };
-  const downloadCallRecord = () => {
-    //if successfully downloaded
-    getCallRecordTrigger().then((res) => setisDownloaded(true));
+  const downloadRecord = () => {
+    if (record && partnership_id) {
+      getRecordTrigger({ record, partnership_id });
+    }
   };
   const callDuration =
     status === CallStatusValues.Success
@@ -70,10 +79,9 @@ export const useCallData = (callData: Call) => {
     source,
     avatar,
     record,
-    callRecordData,
-    downloadCallRecord,
-    isDownloaded,
-    setisDownloaded,
-    deleteRecordFromCache
+    recordDataLocalURL,
+    isRecordDownloaded,
+    downloadRecord,
+    deleteRecordFromCache,
   };
 };

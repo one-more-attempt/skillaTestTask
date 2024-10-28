@@ -1,4 +1,4 @@
-import { Calls } from "../types/api-types";
+import { Calls, GetCallRecordParams } from "../types/api-types";
 import { skillaAPI } from "./api";
 import { API } from "./api-url";
 
@@ -15,9 +15,9 @@ const getCalls = skillaAPI.injectEndpoints({
 
 export const getCallRecord = skillaAPI.injectEndpoints({
   endpoints: (builder) => ({
-    getCallRecord: builder.mutation<string, void>({
-      query: () => ({
-        url: API.getCallRecord(),
+    getCallRecord: builder.mutation<string, GetCallRecordParams>({
+      query: (getCallRecordParams) => ({
+        url: API.getCallRecord(getCallRecordParams),
         method: "POST",
         responseHandler: async (response) => {
           const blob = await response.blob();
