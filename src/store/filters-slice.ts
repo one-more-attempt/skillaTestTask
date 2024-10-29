@@ -1,21 +1,21 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 export type FilterStateType = {
-  recordLocalURL: string;
+  callTypes: string;
 };
 
 const initialState: FilterStateType = {
-  recordLocalURL: "",
+  callTypes: "",
 };
 
 export const filterSlice = createSlice({
   name: "filterSlice",
   initialState,
   reducers: {
-    setRecordURL: (state, action: PayloadAction<string>) => {
-      state.recordLocalURL = action.payload;
+    setCallTypesFilter: (state, action: PayloadAction<string>) => {
+      state.callTypes = action.payload;
     },
-    clearRecordLocalURL: () => initialState,
+    setInitial: () => initialState,
   },
 });
 
