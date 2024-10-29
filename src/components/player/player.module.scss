@@ -1,0 +1,83 @@
+@import "../../styles/colors.scss";
+
+.playerContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 48px;
+  padding: 12px 18px;
+  background-color: $player-bg;
+  border-radius: 48px;
+
+  .progressBar {
+    width: 164px;
+    height: 4px;
+    background-color: $player-progress-bar-time-remaining;
+    border-radius: 5px;
+    position: relative;
+    margin-right: 18px;
+    .progress {
+      height: 4px;
+      background-color: $player-progress-bar-time-elapsed;
+      transition: width 0.1s;
+    }
+    .tooltip {
+      font-size: 14px;
+      line-height: 20px;
+      position: absolute;
+      bottom: 4px;
+    }
+    .rightAlign {
+      transform: translateX(0);
+    }
+    .leftAlign {
+      transform: translateX(-100%);
+    }
+  }
+  .playerTime {
+    width: 38px;
+    text-align: right;
+    margin-right: 12px;
+  }
+
+  .playPauseBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background-color: $white;
+    svg {
+      width: 8px;
+      height: 10px;
+    }
+  }
+
+  .downloadBtn {
+    margin-right: 22px;
+    svg {
+      width: 13px;
+      height: 16px;
+    }
+  }
+
+  .closeBtn {
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  .downloadBtn,
+  .closeBtn,
+  .playPauseBtn {
+    border: none;
+    cursor: pointer;
+    color: $player-btn-active;
+    &:disabled {
+      color: $player-btn-disabled;
+    }
+  }
+}

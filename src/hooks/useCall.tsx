@@ -7,8 +7,9 @@ import {
 import { Call } from "../types/api-types";
 import { useMemo, useState } from "react";
 import { useGetCallRecordMutation } from "../api/endpoints";
+import { timeFormat } from "../helpers/time-formater";
 
-export const useCallData = (callData: Call) => {
+export const useCall = (callData: Call) => {
   const {
     time,
     date,
@@ -21,6 +22,7 @@ export const useCallData = (callData: Call) => {
     record,
     partnership_id,
   } = callData;
+  const [isRowFocused, setIsRowFocused] = useState(false);
   const [
     getRecordTrigger,
     {
@@ -29,24 +31,18 @@ export const useCallData = (callData: Call) => {
       isSuccess: isRecordDownloaded,
     },
   ] = useGetCallRecordMutation();
-  // const [isRecordDownloaded, setIsRecordDownloaded] = useState(false);
-
   const deleteRecordFromCache = () => {
     resetGetRecordMutationCache();
-    //clear data from storage
-    // setIsRecordDownloaded(false);
   };
+  const focusRow = () => setIsRowFocused(true);
+  const unfocusRow = () => setIsRowFocused(false);
   const downloadRecord = () => {
     if (record && partnership_id) {
       getRecordTrigger({ record, partnership_id });
     }
   };
   const callDuration =
-    status === CallStatusValues.Success
-      ? moment
-          .utc(moment.duration(time, "seconds").asMilliseconds())
-          .format("m:ss")
-      : "";
+    status === CallStatusValues.Success ? timeFormat.secondsToMinSec(time) : "";
   const callTime = moment(date).format("HH:mm");
   let callType: CallTypeValues;
   if (in_out === 1) {
@@ -69,7 +65,7 @@ export const useCallData = (callData: Call) => {
       posibleRatingTypes[Math.floor(Math.random() * posibleRatingTypes.length)],
     []
   );
-
+  const isPlayerVisible = !!record && (isRowFocused || isRecordDownloaded);
   return {
     callType,
     callNumber,
@@ -81,7 +77,10 @@ export const useCallData = (callData: Call) => {
     record,
     recordDataLocalURL,
     isRecordDownloaded,
+    isPlayerVisible,
     downloadRecord,
     deleteRecordFromCache,
+    focusRow,
+    unfocusRow,
   };
 };
