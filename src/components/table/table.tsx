@@ -3,7 +3,7 @@ import { TableFilter } from "../table-filter/table-filter";
 import { TableHeader } from "../table-header/table-header";
 import { TableRow } from "../table-row/table-row";
 import styles from "./table.module.scss";
-import { useCalls } from "../../hooks/useCalls";
+import { useCalls } from "./hooks/useCalls";
 
 export const Table: FC = () => {
   const { callsListData } = useCalls();
