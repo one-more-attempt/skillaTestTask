@@ -1,7 +1,6 @@
 @import "../../styles/colors.scss";
 
 .row {
-  border-top: 1px solid $row-divider;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,8 +10,18 @@
   color: $text-primary;
   font-size: 14px;
   padding: 0 40px;
+  position: relative;
   &:hover {
     background-color: $row-hover;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    left: 40px;
+    right: 40px;
+    background-color: $row-divider;
   }
   .callType {
     width: 24px;
