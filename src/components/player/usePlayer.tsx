@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
-import { AudioPlayerProps } from "../types/player-types";
-import { timeFormat } from "../../../helpers/time-formater";
+import { timeFormat } from "../../helpers/time-formater";
+import { AudioPlayerProps } from "./player-types";
 
 export const useAudioPlayer = ({
   playerData: {

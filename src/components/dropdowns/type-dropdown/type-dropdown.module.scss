@@ -1,0 +1,61 @@
+@import "../../../styles/colors.scss";
+
+.dropdownContainer {
+  position: relative;
+  display: inline-block;
+
+  .dropdownTitle {
+    background-color: inherit;
+    color: $text-secondary;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  .titleActive {
+    color: $type-dd-selected-item;
+  }
+
+  .arrowIcon {
+    color: #adbfdf;
+    width: 10px;
+    height: 6px;
+    margin-left: 8px;
+  }
+  .active {
+    color: $dropdown-icons-active;
+  }
+
+  .dropdownMenu {
+    min-width: 133px;
+    position: absolute;
+    top: 22px;
+    background-color: $white;
+    border-radius: 4px;
+    padding: 4px 0px;
+    box-shadow: 0px 4px 20px 0px $type-dd-container-shadow;
+    z-index: 1000;
+  }
+
+  .dropdownItem {
+    padding: 7px 12px;
+    color: $type-dd-item;
+    font-family: "SF Compact Display", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    cur &:hover {
+      background-color: $type-dd-hover-bg;
+    }
+  }
+
+  .dropdownItemActive {
+    color: $type-dd-selected-item;
+  }
+  .dropdownItemDefault {
+    color: $type-dd-item;
+  }
+}

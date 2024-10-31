@@ -1,0 +1,17 @@
+@import "../../styles/colors.scss";
+
+.resetBtn {
+  margin-left: 8px;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+
+  svg {
+    width: 9px;
+    height: 9px;
+    color: $dropdown-icons;
+    &:hover {
+      color: $dropdown-icons-active;
+    }
+  }
+}

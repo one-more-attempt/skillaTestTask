@@ -1,22 +1,23 @@
+import { TypeDropdown } from "../dropdowns/type-dropdown/type-dropdown";
+import { FilterReseter } from "../filters-reseter/filter-reseter";
 import styles from "./table-filter.module.scss";
-import dropdownIcon from "../../icons/filter/dropdown.svg";
-import arrowLeft from "../../icons/filter/arrow-left.svg";
-import arrowRight from "../../icons/filter/arrow-right.svg";
-import calendar from "../../icons/filter/calendar.svg";
+import { FC } from "react";
 
-export const TableFilter = () => (
-  <div className={styles.filterRow}>
-    <div className={styles.typeFilterContainer}>
-      <span>Все типы</span>
-      <img src={dropdownIcon} alt="dropdown-icon" />
+export const TableFilter: FC = () => {
+  const handleAllClick = () => console.log("Выбрано: Все типыs");
+  const handleIncomingClick = () => console.log("Выбрано: Входящие");
+  const handleOutgoingClick = () => console.log("Выбрано: Исходящие");
+
+  const menuItems = [
+    { id: "all", label: "Все типы", onClick: handleAllClick },
+    { id: "incoming", label: "Входящие", onClick: handleIncomingClick },
+    { id: "outgoing", label: "Исходящие", onClick: handleOutgoingClick },
+  ];
+
+  return (
+    <div className={styles.filterRow}>
+      <TypeDropdown items={menuItems} />
+      <FilterReseter onClick={() => {}} />
     </div>
-    <div className={styles.dateFilterContainer}>
-      <img src={arrowLeft} alt="dropdown-icon" />
-      <div className={styles.calendar}>
-        <img src={calendar} alt="calendar-icon" />
-        <span> Дата</span>
-      </div>
-      <img src={arrowRight} alt="dropdown-icon" />
-    </div>
-  </div>
-);
+  );
+};

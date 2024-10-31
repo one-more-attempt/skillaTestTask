@@ -1,19 +1,19 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 export type FilterStateType = {
-  callTypes: string;
+  isDefaultSort: boolean;
 };
 
 const initialState: FilterStateType = {
-  callTypes: "",
+  isDefaultSort: true,
 };
 
 export const filterSlice = createSlice({
   name: "filterSlice",
   initialState,
   reducers: {
-    setCallTypesFilter: (state, action: PayloadAction<string>) => {
-      state.callTypes = action.payload;
+    setisDefault: (state, action: PayloadAction<boolean>) => {
+      state.isDefaultSort = action.payload;
     },
     setInitial: () => initialState,
   },

@@ -12,7 +12,7 @@ $row-hover: rgba(212, 223, 243, 0.17);
 //text
 $text-primary: #122945;
 $text-secondary: #5e7793;
-$text-rating-perfect: #00a775;
+$text-rating-perfect: #020202;
 $text-rating-bad: #ea1a4f;
 $text-rating-good: #122945;
 
@@ -35,5 +35,12 @@ $player-play-pause-btn-bg: $white;
 $player-btn-active: #002cfb;
 $player-btn-disabled: #adbfdf;
 
-//filters
-$selected-filter: #015ef5;
+//dropdowns
+$dropdown-icons: #adbfdf;
+$dropdown-icons-active: #002CFB;
+
+$type-dd-item: #2b2d33;
+$type-dd-selected-item: #015ef5;
+$type-dd-hover-bg: #dee4ff;
+$type-dd-container-shadow: #00000014;
+

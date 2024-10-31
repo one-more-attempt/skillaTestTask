@@ -1,0 +1,46 @@
+@import "../../styles/colors.scss";
+.dropdownContainer {
+  position: relative;
+  display: inline-block;
+  color: $text-secondary;
+
+  .dropdownTitle {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    background-color: inherit;
+    border: none;
+    color: $dd-selected-item;
+    margin-right: 14px;
+    .arrowUp,
+    .arrowDown {
+      width: 10px;
+      height: 6px;
+    }
+    .arrowDown {
+    }
+    .arrowUp {
+    }
+  }
+
+  .dropdownMenu {
+    position: absolute;
+    top: 40px;
+    background-color: $white;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 150px;
+    z-index: 1000;
+  }
+
+  .dropdownItem {
+    padding: 6px 20px;
+    &:hover {
+      background-color: $dd-hover-bg;
+    }
+  }
+
+  .dropdownItemActive {
+    color: $dd-selected-item;
+  }
+}

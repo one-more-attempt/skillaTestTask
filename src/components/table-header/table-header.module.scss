@@ -10,4 +10,20 @@
   .callType {
     justify-content: left;
   }
+  .time,
+  .duration {
+    cursor: pointer;
+    &:hover {
+      color: $dropdown-icons-active;
+    }
+    span {
+      line-height: 24px;
+      margin-right: 7px;
+    }
+    svg {
+      width: 10px;
+      height: 6px;
+    }
+   
+  }
 }

@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styles from "./rating.module.scss";
-import cn from "classnames";
+import classNames from "classnames";
 import { CallRatingValues } from "../../constants";
 
 type Props = {
@@ -8,7 +8,7 @@ type Props = {
 };
 
 export const Rating: FC<Props> = ({ type }: Props) => {
-  const ratingStyle = cn(styles.mainRatingWrapper, {
+  const ratingStyle = classNames(styles.mainRatingWrapper, {
     [styles.perfect]: type === CallRatingValues.Perfect,
     [styles.bad]: type === CallRatingValues.Bad,
     [styles.good]: type === CallRatingValues.Good,
