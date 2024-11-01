@@ -3,7 +3,7 @@ import { ReactComponent as ArrowDown } from "../../icons/filters/arrow-down.svg"
 import { ReactComponent as ArrowUp } from "../../icons/filters/arrow-up.svg";
 import { FC } from "react";
 import { filterSliceData } from "../../store/selector";
-import { useAppDispatch, useAppSelector } from "../../store/hooks/redux-hooks";
+import { useAppDispatch, useAppSelector } from "../../store/redux-hooks";
 
 type Props = {};
 

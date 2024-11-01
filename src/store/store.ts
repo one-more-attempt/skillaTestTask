@@ -1,5 +1,5 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { filterSliceReducer } from "./filters-slice";
+import { filterSliceReducer } from "./slices/filters-slice";
 import { skillaAPI } from "../api/api";
 
 const rootReducer = combineReducers({

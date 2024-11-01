@@ -3,11 +3,11 @@ import {
   CallRatingValues,
   CallStatusValues,
   CallTypeValues,
-} from "../../../constants";
-import { Call } from "../../../types/api-types";
+} from "../../constants";
+import { Call } from "../../types/api-types";
 import { useMemo, useState } from "react";
-import { useGetCallRecordMutation } from "../../../api/endpoints";
-import { timeFormat } from "../../../helpers/time-formater";
+import { useGetCallRecordMutation } from "../../api/endpoints";
+import { timeFormat } from "../../helpers/time-formater";
 
 export const useCall = (callData: Call) => {
   const {

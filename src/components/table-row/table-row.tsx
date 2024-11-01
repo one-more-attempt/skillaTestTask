@@ -3,7 +3,7 @@ import { CallTypeIcons } from "../call-type/call-type";
 import { Avatar } from "../avatar/avatar";
 import { FC } from "react";
 import { Call } from "../../types/api-types";
-import { useCall } from "./hooks/useCall";
+import { useCall } from "./useCall";
 import styles from "./table-row.module.scss";
 import { AudioPlayer } from "../player/audio-player";
 
