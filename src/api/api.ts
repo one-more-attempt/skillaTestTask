@@ -5,5 +5,6 @@ export const skillaAPI = createApi({
   reducerPath: "skillaAPI",
   baseQuery: baseQuery,
   tagTypes: [],
+  refetchOnMountOrArgChange: true,
   endpoints: () => ({}),
 });

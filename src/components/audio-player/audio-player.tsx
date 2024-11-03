@@ -3,9 +3,9 @@ import { ReactComponent as PlayerCloseIcon } from "../../icons/player/close-butt
 import { ReactComponent as PlayerPlayIcon } from "../../icons/player/play-button.svg";
 import { ReactComponent as PlayerPauseIcon } from "../../icons/player/pause-button.svg";
 import { ReactComponent as PlayerDownloadIcon } from "../../icons/player/download-button.svg";
-import { AudioPlayerProps } from "./player-types";
-import styles from "./player.module.scss";
-import { useAudioPlayer } from "./usePlayer";
+import { AudioPlayerProps } from "./audio-player-types";
+import styles from "./audio-player.module.scss";
+import { useAudioPlayer } from "./useAudioPlayer";
 
 export const AudioPlayer: FC<AudioPlayerProps> = (
   playerData: AudioPlayerProps

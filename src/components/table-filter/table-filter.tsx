@@ -9,11 +9,17 @@ import { FC } from "react";
 export const TableFilter: FC = () => {
   const dispatch = useAppDispatch();
   const { isDefaultSort } = useAppSelector(filterSliceData);
-  // dispatch(filterSliceActions.setDefaultSort());
 
-  const handleAllClick = () => console.log("Выбрано: Все типыs");
-  const handleIncomingClick = () => console.log("Выбрано: Входящие");
-  const handleOutgoingClick = () => console.log("Выбрано: Исходящие");
+  const handleAllClick = () => {};
+  // dispatch(filterSliceActions.setFilter({ in_out: "" }));
+  const handleIncomingClick = () => {
+    // dispatch(filterSliceActions.setFilter({ in_out: "1" }));
+  };
+  const handleOutgoingClick = () => {
+    // dispatch(filterSliceActions.setFilter({ in_out: "0" }));
+  };
+  const handleResetFilters = () => {};
+  // dispatch(filterSliceActions.setDefaultSort());
 
   const menuItems = [
     { id: "all", label: "Все типы", onClick: handleAllClick },
@@ -24,7 +30,7 @@ export const TableFilter: FC = () => {
   return (
     <div className={styles.filterRow}>
       <TypeDropdown items={menuItems} />
-      {isDefaultSort && <FilterReseter onClick={() => {}} />}
+      {!isDefaultSort && <FilterReseter onClick={handleResetFilters} />}
     </div>
   );
 };

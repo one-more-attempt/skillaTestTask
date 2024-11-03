@@ -5,7 +5,7 @@ import { FC } from "react";
 import { Call } from "../../types/api-types";
 import { useCall } from "./useCall";
 import styles from "./table-row.module.scss";
-import { AudioPlayer } from "../player/audio-player";
+import { AudioPlayer } from "../audio-player/audio-player";
 
 type Props = {
   callData: Call;

@@ -1,5 +1,5 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { CallListSearchParams } from "../../api/api-url";
+import { CallListSearchParams } from "../../types/api-types";
 
 export type FilterStateType = {
   isDefaultSort: boolean;
@@ -9,9 +9,11 @@ export type FilterStateType = {
 const initialState: FilterStateType = {
   isDefaultSort: true,
   filters: {
-    in_out: undefined,
-    sort_by: undefined,
-    order: undefined,
+    in_out: "",
+    sort_by: "date",
+    order: "DESC",
+    date_start: "",
+    date_end: "",
   },
 };
 
@@ -21,6 +23,8 @@ export const filterSlice = createSlice({
   reducers: {
     setFilter: (state, action: PayloadAction<CallListSearchParams>) => {
       state.filters = action.payload;
+      state.isDefaultSort =
+        JSON.stringify(state.filters) === JSON.stringify(initialState.filters);
     },
     setDefaultSort: () => initialState,
   },

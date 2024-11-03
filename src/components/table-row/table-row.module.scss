@@ -14,15 +14,19 @@
   &:hover {
     background-color: $row-hover;
   }
-  &::after {
+  &::before {
     content: "";
     position: absolute;
-    bottom: 0;
+    top: 0;
     height: 1px;
     left: 40px;
     right: 40px;
     background-color: $row-divider;
   }
+  &:first-child::before {
+    content: none;
+  }
+
   .callType {
     width: 24px;
     display: flex;

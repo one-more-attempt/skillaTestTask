@@ -1,14 +1,59 @@
-import { Calls, GetCallRecordParams } from "../types/api-types";
+import moment from "moment";
+import 'moment/locale/ru';
+import { Dates } from "../constants";
+import {
+  CallListSearchParams,
+  Calls,
+  GetCallRecordParams,
+  GroupedCall,
+} from "../types/api-types";
 import { skillaAPI } from "./api";
-import { API, CallListSearchParams } from "./api-url";
+import { API } from "./api-url";
+
+moment.locale("ru");
 
 const getCalls = skillaAPI.injectEndpoints({
   endpoints: (builder) => ({
-    getCalls: builder.mutation<Calls, CallListSearchParams | void>({
+    getCalls: builder.mutation<GroupedCall[], CallListSearchParams>({
       query: (params) => ({
         url: API.getCalls(params),
         method: "POST",
       }),
+      transformResponse: (response: Calls): GroupedCall[] => {
+        const grouped: { [date: string]: GroupedCall } = {};
+        const localeToday = moment().format("D MMMM YYYY");
+        const localeYesterday = moment()
+          .subtract(1, "days")
+          .format("D MMMM YYYY");
+
+        response.results.forEach((call) => {
+          const callDate = moment(call.date_notime).format("D MMMM YYYY");
+          let displayDate: string;
+
+          switch (callDate) {
+            case localeToday:
+              displayDate = Dates.Today;
+              break;
+            case localeYesterday:
+              displayDate = Dates.Yesterday;
+              break;
+            default:
+              displayDate = callDate;
+          }
+
+          // initialize new date
+          if (!grouped[displayDate]) {
+            grouped[displayDate] = { date: displayDate, calls: [], count: 0 };
+          }
+
+          // calls counter
+          grouped[displayDate].calls.push(call);
+          grouped[displayDate].count += 1;
+        });
+
+        // transform to array
+        return Object.values(grouped);
+      },
     }),
   }),
 });

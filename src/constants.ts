@@ -19,3 +19,8 @@ export enum CallRatingValues {
   Bad = "Плохо",
   Error = "Скрипт не использован",
 }
+
+export enum Dates {
+  Today = "Сегодня",
+  Yesterday = "Вчера",
+}

@@ -7,15 +7,20 @@ import { useCalls } from "./useCalls";
 
 export const Table: FC = () => {
   const { callsListData } = useCalls();
+  console.log(callsListData);
 
   return (
     <div className={styles.mainWrapper}>
       <TableFilter />
       <div className={styles.tableContent}>
         <TableHeader />
-        {callsListData?.results.map((item) => (
-          <TableRow callData={item} />
-        ))}
+        {callsListData?.flatMap(({ date, calls, count }) => [
+          <div className={styles.dateSeparator} key={date}>
+            <span>{date}</span>
+            <sup className={styles.counter}>{count}</sup>
+          </div>,
+          ...calls.map((call) => <TableRow callData={call} />),
+        ])}
       </div>
     </div>
   );
