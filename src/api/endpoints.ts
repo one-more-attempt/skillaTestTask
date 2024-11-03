@@ -1,5 +1,4 @@
 import moment from "moment";
-import 'moment/locale/ru';
 import { Dates } from "../constants";
 import {
   CallListSearchParams,
@@ -9,8 +8,6 @@ import {
 } from "../types/api-types";
 import { skillaAPI } from "./api";
 import { API } from "./api-url";
-
-moment.locale("ru");
 
 const getCalls = skillaAPI.injectEndpoints({
   endpoints: (builder) => ({
