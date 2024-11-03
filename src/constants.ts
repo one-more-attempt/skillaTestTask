@@ -1,3 +1,8 @@
+export enum API_URL {
+  GetList = "getList",
+  GetRecord = "getRecord",
+}
+
 export enum CallStatusValues {
   Success = "Дозвонился",
   Failed = "Не дозвонился",

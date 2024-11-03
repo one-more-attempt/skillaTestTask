@@ -1,21 +1,28 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { CallListSearchParams } from "../../api/api-url";
 
 export type FilterStateType = {
   isDefaultSort: boolean;
+  filters: CallListSearchParams;
 };
 
 const initialState: FilterStateType = {
   isDefaultSort: true,
+  filters: {
+    in_out: undefined,
+    sort_by: undefined,
+    order: undefined,
+  },
 };
 
 export const filterSlice = createSlice({
   name: "filterSlice",
   initialState,
   reducers: {
-    setisDefault: (state, action: PayloadAction<boolean>) => {
-      state.isDefaultSort = action.payload;
+    setFilter: (state, action: PayloadAction<CallListSearchParams>) => {
+      state.filters = action.payload;
     },
-    setInitial: () => initialState,
+    setDefaultSort: () => initialState,
   },
 });
 
