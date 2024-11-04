@@ -1,0 +1,12 @@
+@import "../../styles/colors.scss";
+.dateSeparator {
+  font-size: 15px;
+  color: $text-primary;
+  padding: 39px 40px 16px 40px;
+
+  .counter {
+    font-size: 12px;
+    margin-left: 2px;
+    color: $text-date-separator-counter;
+  }
+}

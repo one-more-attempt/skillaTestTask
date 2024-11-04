@@ -8,10 +8,10 @@ import styles from "./table-row.module.scss";
 import { AudioPlayer } from "../audio-player/audio-player";
 
 type Props = {
-  callData: Call;
+  data: Call;
 };
 
-export const TableRow: FC<Props> = ({ callData }: Props) => {
+export const CallRow: FC<Props> = ({ data }: Props) => {
   const {
     callType,
     callTime,
@@ -27,10 +27,11 @@ export const TableRow: FC<Props> = ({ callData }: Props) => {
     deleteRecordFromCache,
     focusRow,
     unfocusRow,
-  } = useCall(callData);
+  } = useCall(data);
 
   return (
     <div
+      key={data.id}
       className={styles.row}
       onMouseEnter={focusRow}
       onMouseLeave={unfocusRow}

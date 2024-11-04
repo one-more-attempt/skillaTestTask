@@ -1,18 +1,18 @@
 import { FC } from "react";
 import styles from "./rating.module.scss";
 import classNames from "classnames";
-import { CallRatingValues } from "../../constants";
+import { CallRatingEnum } from "../../constants";
 
 type Props = {
-  type: CallRatingValues;
+  type: CallRatingEnum;
 };
 
 export const Rating: FC<Props> = ({ type }: Props) => {
   const ratingStyle = classNames(styles.mainRatingWrapper, {
-    [styles.perfect]: type === CallRatingValues.Perfect,
-    [styles.bad]: type === CallRatingValues.Bad,
-    [styles.good]: type === CallRatingValues.Good,
-    [styles.error]: type === CallRatingValues.Error,
+    [styles.perfect]: type === CallRatingEnum.Perfect,
+    [styles.bad]: type === CallRatingEnum.Bad,
+    [styles.good]: type === CallRatingEnum.Good,
+    [styles.error]: type === CallRatingEnum.Error,
   });
 
   return (

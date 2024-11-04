@@ -1,12 +1,27 @@
-import { CallStatusValues } from "../constants";
+import {
+  CallsOrderParamsEnum,
+  CallsSortParamsEnum,
+  CallStatusEnum,
+  CallsTypeParamsEnum,
+  TableRowItemType,
+} from "../constants";
+
+export type CallListSearchParams = {
+  in_out?: CallsTypeParamsEnum;
+  sort_by?: CallsSortParamsEnum;
+  order?: CallsOrderParamsEnum;
+  date_start?: string;
+  date_end?: string;
+  limit: number;
+};
 
 export type Call = {
   id: number;
   time: number;
   date: string;
   date_notime: string;
-  in_out: 0 | 1;
-  status: CallStatusValues;
+  in_out: CallsTypeParamsEnum;
+  status: CallStatusEnum;
   from_number: string;
   source: string;
   to_number: string;
@@ -20,21 +35,26 @@ export type Calls = {
   total_rows: string;
 };
 
-export type GroupedCall = {
-  date: string;
-  count: number;
-  calls: Call[];
+export type CallData = {
+  type: TableRowItemType.Call;
+  data: Call;
 };
+
+export type DateSeparator = {
+  type: TableRowItemType.Date;
+  data: {
+    date: string;
+    count: number;
+  };
+};
+
+export type GroupedCallsByDate = {
+  [date: string]: { calls: Call[]; count: number };
+};
+
+export type TableRowData = CallData | DateSeparator;
 
 export type GetCallRecordParams = {
   record: string;
   partnership_id: string;
-};
-
-export type CallListSearchParams = {
-  in_out?: "0" | "1" | "";
-  sort_by?: "date" | "duration";
-  order?: "ASC" | "DESC";
-  date_start?: string;
-  date_end?: string;
 };

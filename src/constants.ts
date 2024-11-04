@@ -1,26 +1,45 @@
-export enum API_URL {
+export enum APIEndpointEnum {
   GetList = "getList",
   GetRecord = "getRecord",
 }
 
-export enum CallStatusValues {
+export enum CallStatusEnum {
   Success = "Дозвонился",
   Failed = "Не дозвонился",
 }
-export enum CallTypeValues {
+export enum CallTypeEnum {
   Incoming = "incoming",
   Outgoing = "outgoing",
   Missed = "missed",
   Failed = "failed",
 }
-export enum CallRatingValues {
+export enum CallRatingEnum {
   Perfect = "Отлично",
   Good = "Хорошо",
   Bad = "Плохо",
   Error = "Скрипт не использован",
 }
 
-export enum Dates {
+export enum DatesEnum {
   Today = "Сегодня",
   Yesterday = "Вчера",
+}
+
+export enum TableRowItemType {
+  Date = "date",
+  Call = "call",
+}
+
+//filters params
+export enum CallsTypeParamsEnum {
+  Incoming = "0",
+  Outgoing = "1",
+}
+export enum CallsSortParamsEnum {
+  Date = "date",
+  Duration = "duration",
+}
+export enum CallsOrderParamsEnum {
+  ASC = "ASC",
+  DESC = "DESC",
 }

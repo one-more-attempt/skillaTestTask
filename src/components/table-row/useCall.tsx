@@ -1,8 +1,9 @@
 import moment from "moment";
 import {
-  CallRatingValues,
-  CallStatusValues,
-  CallTypeValues,
+  CallRatingEnum,
+  CallStatusEnum,
+  CallsTypeParamsEnum,
+  CallTypeEnum,
 } from "../../constants";
 import { Call } from "../../types/api-types";
 import { useMemo, useState } from "react";
@@ -42,24 +43,25 @@ export const useCall = (callData: Call) => {
     }
   };
   const callDuration =
-    status === CallStatusValues.Success ? timeFormat.secondsToMinSec(time) : "";
+    status === CallStatusEnum.Success ? timeFormat.secondsToMinSec(time) : "";
   const callTime = moment(date).format("HH:mm");
-  let callType: CallTypeValues;
-  if (in_out === 1) {
+  let callType: CallTypeEnum;
+  if (in_out === CallsTypeParamsEnum.Incoming) {
     //incoming call
-    status === CallStatusValues.Success
-      ? (callType = CallTypeValues.Incoming)
-      : (callType = CallTypeValues.Missed);
+    status === CallStatusEnum.Success
+      ? (callType = CallTypeEnum.Incoming)
+      : (callType = CallTypeEnum.Missed);
   } else {
     //outgoing call
-    status === CallStatusValues.Success
-      ? (callType = CallTypeValues.Outgoing)
-      : (callType = CallTypeValues.Failed);
+    status === CallStatusEnum.Success
+      ? (callType = CallTypeEnum.Outgoing)
+      : (callType = CallTypeEnum.Failed);
   }
   //incoming or outgoing number
-  const callNumber = in_out === 1 ? from_number : to_number;
+  const callNumber =
+    in_out === CallsTypeParamsEnum.Incoming ? from_number : to_number;
   //has no rating value in the API, so it is randomly generated to match the design of the Figma layout
-  const posibleRatingTypes = Object.values(CallRatingValues);
+  const posibleRatingTypes = Object.values(CallRatingEnum);
   const rating = useMemo(
     () =>
       posibleRatingTypes[Math.floor(Math.random() * posibleRatingTypes.length)],

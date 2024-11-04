@@ -1,5 +1,5 @@
 import { fetchBaseQuery } from "@reduxjs/toolkit/query";
-import { API } from "./api-url";
+import { API_URL } from "./api-url";
 
 const API_TOKEN = process.env.REACT_APP_API_TEST_TOKEN;
 
@@ -9,6 +9,6 @@ export const prepareHeaders = (headers: Headers) => {
 };
 
 export const baseQuery = fetchBaseQuery({
-  baseUrl: API.baseURL,
+  baseUrl: API_URL.baseURL,
   prepareHeaders: prepareHeaders,
 });
