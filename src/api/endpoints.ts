@@ -18,15 +18,12 @@ const getCalls = skillaAPI.injectEndpoints({
       }),
       transformResponse: (response: Calls): GroupedCall[] => {
         const grouped: { [date: string]: GroupedCall } = {};
-        const localeToday = moment().format("D MMMM YYYY");
-        const localeYesterday = moment()
-          .subtract(1, "days")
-          .format("D MMMM YYYY");
+        const localeToday = moment().format("D MMMM");
+        const localeYesterday = moment().subtract(1, "days").format("D MMMM");
 
         response.results.forEach((call) => {
-          const callDate = moment(call.date_notime).format("D MMMM YYYY");
+          const callDate = moment(call.date_notime).format("D MMMM");
           let displayDate: string;
-
           switch (callDate) {
             case localeToday:
               displayDate = Dates.Today;
