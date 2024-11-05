@@ -1,8 +1,10 @@
 import {
+  CallRatingEnum,
   CallsOrderParamsEnum,
   CallsSortParamsEnum,
   CallStatusEnum,
   CallsTypeParamsEnum,
+  CallTypeEnum,
   TableRowItemType,
 } from "../constants";
 
@@ -12,7 +14,7 @@ export type CallListSearchParams = {
   order?: CallsOrderParamsEnum;
   date_start?: string;
   date_end?: string;
-  limit: number;
+  limit: string;
 };
 
 export type Call = {
@@ -35,12 +37,25 @@ export type Calls = {
   total_rows: string;
 };
 
-export type CallData = {
-  type: TableRowItemType.Call;
-  data: Call;
+export type CallViewItem = {
+  id: number;
+  callDuration: string;
+  callTime: string;
+  callType: CallTypeEnum;
+  callNumber: string;
+  rating: CallRatingEnum;
+  record: string;
+  source:string;
+  avatar:string;
+  partnership_id: string;
 };
 
-export type DateSeparator = {
+export type CallDataView = {
+  type: TableRowItemType.Call;
+  data: CallViewItem;
+};
+
+export type CallViewSeparator = {
   type: TableRowItemType.Date;
   data: {
     date: string;
@@ -49,10 +64,10 @@ export type DateSeparator = {
 };
 
 export type GroupedCallsByDate = {
-  [date: string]: { calls: Call[]; count: number };
+  [date: string]: { calls: CallViewItem[]; count: number };
 };
 
-export type TableRowData = CallData | DateSeparator;
+export type TableRowData = CallDataView | CallViewSeparator;
 
 export type GetCallRecordParams = {
   record: string;

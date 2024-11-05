@@ -1,27 +1,18 @@
-import moment from "moment";
-import {
-  CallRatingEnum,
-  CallStatusEnum,
-  CallsTypeParamsEnum,
-  CallTypeEnum,
-} from "../../constants";
-import { Call } from "../../types/api-types";
-import { useMemo, useState } from "react";
+import { CallViewItem } from "../../types/api-types";
+import { useState } from "react";
 import { useGetCallRecordMutation } from "../../api/endpoints";
-import { timeFormat } from "../../utils/time-formater";
 
-export const useCall = (callData: Call) => {
+export const useCall = (callData: CallViewItem) => {
   const {
-    time,
-    date,
-    in_out,
-    status,
-    from_number,
-    to_number,
-    person_avatar: avatar,
-    source,
     record,
     partnership_id,
+    callType,
+    callNumber,
+    callDuration,
+    callTime,
+    rating,
+    source,
+    avatar,
   } = callData;
   const [isRowFocused, setIsRowFocused] = useState(false);
   const [
@@ -42,31 +33,6 @@ export const useCall = (callData: Call) => {
       getRecordTrigger({ record, partnership_id });
     }
   };
-  const callDuration =
-    status === CallStatusEnum.Success ? timeFormat.secondsToMinSec(time) : "";
-  const callTime = moment(date).format("HH:mm");
-  let callType: CallTypeEnum;
-  if (in_out === CallsTypeParamsEnum.Incoming) {
-    //incoming call
-    status === CallStatusEnum.Success
-      ? (callType = CallTypeEnum.Incoming)
-      : (callType = CallTypeEnum.Missed);
-  } else {
-    //outgoing call
-    status === CallStatusEnum.Success
-      ? (callType = CallTypeEnum.Outgoing)
-      : (callType = CallTypeEnum.Failed);
-  }
-  //incoming or outgoing number
-  const callNumber =
-    in_out === CallsTypeParamsEnum.Incoming ? from_number : to_number;
-  //has no rating value in the API, so it is randomly generated to match the design of the Figma layout
-  const posibleRatingTypes = Object.values(CallRatingEnum);
-  const rating = useMemo(
-    () =>
-      posibleRatingTypes[Math.floor(Math.random() * posibleRatingTypes.length)],
-    []
-  );
   const isPlayerVisible = !!record && (isRowFocused || isRecordDownloaded);
   return {
     callType,
@@ -76,7 +42,6 @@ export const useCall = (callData: Call) => {
     rating,
     source,
     avatar,
-    record,
     recordDataLocalURL,
     isRecordDownloaded,
     isPlayerVisible,

@@ -6,9 +6,16 @@ import { filterSliceData } from "../../store/selector";
 export const useCalls = () => {
   const dispatch = useAppDispatch();
   const { filters } = useAppSelector(filterSliceData);
+
   const [getCallsTrigger, { data: callsListData }] = useGetCallsMutation();
   useEffect(() => {
     getCallsTrigger(filters);
   }, []);
+
+  useEffect(() => {
+    getCallsTrigger(filters);
+  }, [filters]);
+
+
   return { callsListData };
 };

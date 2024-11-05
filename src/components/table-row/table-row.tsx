@@ -2,13 +2,13 @@ import { Rating } from "../rating/rating";
 import { CallTypeIcons } from "../call-type/call-type";
 import { Avatar } from "../avatar/avatar";
 import { FC } from "react";
-import { Call } from "../../types/api-types";
+import { CallViewItem } from "../../types/api-types";
 import { useCall } from "./useCall";
 import styles from "./table-row.module.scss";
 import { AudioPlayer } from "../audio-player/audio-player";
 
 type Props = {
-  data: Call;
+  data: CallViewItem;
 };
 
 export const CallRow: FC<Props> = ({ data }: Props) => {

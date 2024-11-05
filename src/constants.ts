@@ -32,8 +32,8 @@ export enum TableRowItemType {
 
 //filters params
 export enum CallsTypeParamsEnum {
-  Incoming = "0",
-  Outgoing = "1",
+  Incoming = 1,
+  Outgoing = 0,
 }
 export enum CallsSortParamsEnum {
   Date = "date",

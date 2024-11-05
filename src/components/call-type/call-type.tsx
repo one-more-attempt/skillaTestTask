@@ -1,8 +1,8 @@
 import { FC } from "react";
-import incomingCallIcon from "../../icons/calls/incoming-call.svg";
-import outgoingCallIcon from "../../icons/calls/outgoing-call.svg";
-import missedCallIcon from "../../icons/calls/missed-call.svg";
-import failedCallIcon from "../../icons/calls/failed-call.svg";
+import { ReactComponent as IncomingCallIcon } from "../../icons/calls/incoming-call.svg";
+import { ReactComponent as OutgoingCallIcon } from "../../icons/calls/outgoing-call.svg";
+import { ReactComponent as MissedCallIcon } from "../../icons/calls/missed-call.svg";
+import { ReactComponent as FailedCallIcon } from "../../icons/calls/failed-call.svg";
 import { CallTypeEnum } from "../../constants";
 
 type Props = {
@@ -10,10 +10,10 @@ type Props = {
 };
 export const CallTypeIcons: FC<Props> = ({ type }: Props) => {
   const imgSrc = {
-    [CallTypeEnum.Incoming]: incomingCallIcon,
-    [CallTypeEnum.Outgoing]: outgoingCallIcon,
-    [CallTypeEnum.Failed]: failedCallIcon,
-    [CallTypeEnum.Missed]: missedCallIcon,
+    [CallTypeEnum.Incoming]: <IncomingCallIcon />,
+    [CallTypeEnum.Outgoing]: <OutgoingCallIcon />,
+    [CallTypeEnum.Failed]: <FailedCallIcon />,
+    [CallTypeEnum.Missed]: <MissedCallIcon />,
   };
-  return <img src={imgSrc[type]} alt={`${type}-call-icon`} />;
+  return imgSrc[type];
 };

@@ -1,3 +1,4 @@
+import { CallsTypeParamsEnum, CallTypeEnum } from "../../constants";
 import { useAppDispatch, useAppSelector } from "../../store/redux-hooks";
 import { filterSliceData } from "../../store/selector";
 import { filterSliceActions } from "../../store/slices/filters-slice";
@@ -8,18 +9,29 @@ import { FC } from "react";
 
 export const TableFilter: FC = () => {
   const dispatch = useAppDispatch();
-  const { isDefaultSort } = useAppSelector(filterSliceData);
+  const { isDefaultSort, filters } = useAppSelector(filterSliceData);
 
-  const handleAllClick = () => {};
-  // dispatch(filterSliceActions.setFilter({ in_out: "" }));
+  const handleAllClick = () =>
+    dispatch(filterSliceActions.setFilter({ ...filters, in_out: undefined }));
+  const handleResetFilters = () =>
+    dispatch(filterSliceActions.setDefaultSort());
+  
   const handleIncomingClick = () => {
-    // dispatch(filterSliceActions.setFilter({ in_out: "1" }));
+    dispatch(
+      filterSliceActions.setFilter({
+        ...filters,
+        in_out: CallsTypeParamsEnum.Incoming,
+      })
+    );
   };
   const handleOutgoingClick = () => {
-    // dispatch(filterSliceActions.setFilter({ in_out: "0" }));
+    dispatch(
+      filterSliceActions.setFilter({
+        ...filters,
+        in_out: CallsTypeParamsEnum.Outgoing,
+      })
+    );
   };
-  const handleResetFilters = () => {};
-  // dispatch(filterSliceActions.setDefaultSort());
 
   const menuItems = [
     { id: "all", label: "Все типы", onClick: handleAllClick },

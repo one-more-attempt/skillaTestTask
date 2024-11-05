@@ -8,19 +8,17 @@ export type FilterStateType = {
   filters: CallListSearchParams;
 };
 
-//TODO
-//temporary
-const currentData = moment().format("YYYY-MM-DD");
-const lastWeekDateEnd = moment().subtract(7, "days").format("YYYY-MM-DD");
+const currentDate = moment().format("YYYY-MM-DD");
+const threeDaysEarlierDate = moment().subtract(3, "days").format("YYYY-MM-DD");
 const initialState: FilterStateType = {
   isDefaultSort: true,
   filters: {
     in_out: undefined,
     sort_by: CallsSortParamsEnum.Date,
     order: CallsOrderParamsEnum.DESC,
-    date_start: lastWeekDateEnd,
-    date_end: currentData,
-    limit: 200,
+    date_start: threeDaysEarlierDate,
+    date_end: currentDate,
+    limit: "200",
   },
 };
 
