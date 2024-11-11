@@ -1,46 +1,109 @@
-@import "../../styles/colors.scss";
+// @import "../../../styles/colors.scss";
+
+// .dropdownContainer {
+//   position: relative;
+//   display: inline-block;
+//   color: $text-secondary;
+
+//   .dropdownTitle {
+//     font-size: 14px;
+//     display: flex;
+//     align-items: center;
+//     background-color: inherit;
+//     border: none;
+//     color: $dropdown-selected-item;
+//     margin-right: 14px;
+
+//     .arrowUp,
+//     .arrowDown {
+//       width: 10px;
+//       height: 6px;
+//     }
+//     .arrowDown {
+//     }
+//     .arrowUp {
+//     }
+//   }
+
+//   .dropdownMenu {
+//     position: absolute;
+//     top: 40px;
+//     background-color: $white;
+//     border-radius: 4px;
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+//     width: 150px;
+//     z-index: 1000;
+//   }
+
+//   .dropdownItem {
+//     padding: 6px 20px;
+//     &:hover {
+//       background-color: $dropdown-hover-bg;
+//     }
+//   }
+
+//   .dropdownItemActive {
+//     color: $dropdown-selected-item;
+//   }
+// }
+
+@import "../../../styles/colors.scss";
+
 .dropdownContainer {
   position: relative;
   display: inline-block;
-  color: $text-secondary;
 
   .dropdownTitle {
+    background-color: inherit;
+    color: $text-secondary;
+    border: none;
+    cursor: pointer;
     font-size: 14px;
+    line-height: 20px;
     display: flex;
     align-items: center;
-    background-color: inherit;
-    border: none;
-    color: $dd-selected-item;
-    margin-right: 14px;
-    .arrowUp,
-    .arrowDown {
-      width: 10px;
-      height: 6px;
-    }
-    .arrowDown {
-    }
-    .arrowUp {
-    }
+  }
+  .titleActive {
+    color: $dropdown-selected-item;
+  }
+  .arrowIcon {
+    color: $dropdown-icons;
+    width: 10px;
+    height: 6px;
+    margin-left: 8px;
+  }
+  .active {
+    color: $dropdown-icons-active;
   }
 
   .dropdownMenu {
+    min-width: 133px;
     position: absolute;
-    top: 40px;
+    top: 22px;
     background-color: $white;
-    border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 150px;
+    border-radius: 8px;
+    padding: 4px 0px;
+    box-shadow: 0px 4px 20px 0px $dropdown-hover-bg;
     z-index: 1000;
   }
 
   .dropdownItem {
-    padding: 6px 20px;
+    padding: 7px 12px;
+    color: $dropdown-item;
+    font-family: "SF Compact Display", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    cursor: pointer;
     &:hover {
-      background-color: $dd-hover-bg;
+      background-color: $dropdown-hover-bg;
     }
   }
 
   .dropdownItemActive {
-    color: $dd-selected-item;
+    color: $dropdown-selected-item;
+  }
+  .dropdownItemDefault {
+    color: $dropdown-item;
   }
 }

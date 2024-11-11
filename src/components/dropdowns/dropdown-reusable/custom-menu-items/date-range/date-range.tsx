@@ -1,4 +1,4 @@
-import { ReactComponent as Calendar } from "../../../../icons/dropdowns/calendar.svg";
+import { ReactComponent as Calendar } from "../../../../../icons/filters/calendar.svg";
 import { CustomContent } from "../../types";
 
 export const DateRangeContent: CustomContent = ({ onClick }) => (

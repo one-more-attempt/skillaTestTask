@@ -9,7 +9,6 @@ import { DateSeparator } from "../date-separator/date-separator";
 
 export const Table: FC = () => {
   const { callsListData } = useCalls();
-  console.log(callsListData);
 
   return (
     <div className={styles.mainWrapper}>

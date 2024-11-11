@@ -1,0 +1,141 @@
+Date : 2024-11-06 22:17:17
+Directory : c:\Users\1more.attempt\Desktop\skilla-test-task
+Total : 73 files,  20104 codes, 39 comments, 239 blanks, all 20382 lines
+
+Languages
++--------------------+------------+------------+------------+------------+------------+
+| language           | files      | code       | comment    | blank      | total      |
++--------------------+------------+------------+------------+------------+------------+
+| JSON               |          3 |     18,447 |          0 |          3 |     18,450 |
+| TypeScript JSX     |         25 |        916 |         30 |         98 |      1,044 |
+| SCSS               |         16 |        414 |          6 |         60 |        480 |
+| TypeScript         |         10 |        217 |          3 |         39 |        259 |
+| XML                |         15 |         45 |          0 |         15 |         60 |
+| Markdown           |          1 |         26 |          0 |         21 |         47 |
+| JSON with Comments |          1 |         20 |          0 |          1 |         21 |
+| HTML               |          1 |         17 |          0 |          2 |         19 |
+| Properties         |          1 |          2 |          0 |          0 |          2 |
++--------------------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                                           | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                                              |         73 |     20,104 |         39 |        239 |     20,382 |
+| . (Files)                                                                                                                                      |          6 |     18,470 |          1 |         25 |     18,496 |
+| public                                                                                                                                         |          2 |         42 |          0 |          3 |         45 |
+| src                                                                                                                                            |         65 |      1,592 |         38 |        211 |      1,841 |
+| src (Files)                                                                                                                                    |          4 |         71 |          1 |         10 |         82 |
+| src\api                                                                                                                                        |          5 |        151 |          2 |         15 |        168 |
+| src\api (Files)                                                                                                                                |          2 |         39 |          1 |          7 |         47 |
+| src\api\endpoints                                                                                                                              |          3 |        112 |          1 |          8 |        121 |
+| src\components                                                                                                                                 |         33 |      1,159 |         29 |        132 |      1,320 |
+| src\components\audio-player                                                                                                                    |          4 |        298 |          0 |         20 |        318 |
+| src\components\avatar                                                                                                                          |          2 |         39 |          0 |          7 |         46 |
+| src\components\call-type                                                                                                                       |          1 |         18 |          0 |          2 |         20 |
+| src\components\date-separator                                                                                                                  |          2 |         26 |          0 |          4 |         30 |
+| src\components\dropdowns                                                                                                                       |         10 |        348 |          0 |         44 |        392 |
+| src\components\dropdowns\date-dropdown                                                                                                         |          2 |         62 |          0 |          7 |         69 |
+| src\components\dropdowns\dropdown-reusable                                                                                                     |          6 |        172 |          0 |         24 |        196 |
+| src\components\dropdowns\dropdown-reusable (Files)                                                                                             |          4 |        157 |          0 |         20 |        177 |
+| src\components\dropdowns\dropdown-reusable\custom-menu-items                                                                                   |          2 |         15 |          0 |          4 |         19 |
+| src\components\dropdowns\dropdown-reusable\custom-menu-items\date-range                                                                        |          2 |         15 |          0 |          4 |         19 |
+| src\components\dropdowns\type-dropdown                                                                                                         |          2 |        114 |          0 |         13 |        127 |
+| src\components\filters-reseter                                                                                                                 |          2 |         31 |          0 |          6 |         37 |
+| src\components\rating                                                                                                                          |          2 |         48 |          0 |         10 |         58 |
+| src\components\table                                                                                                                           |          3 |         56 |          0 |         11 |         67 |
+| src\components\table-filter                                                                                                                    |          2 |         53 |         29 |         13 |         95 |
+| src\components\table-header                                                                                                                    |          2 |         68 |          0 |          6 |         74 |
+| src\components\table-row                                                                                                                       |          3 |        174 |          0 |          9 |        183 |
+| src\icons                                                                                                                                      |         15 |         45 |          0 |         15 |         60 |
+| src\icons (Files)                                                                                                                              |          1 |          3 |          0 |          1 |          4 |
+| src\icons\calls                                                                                                                                |          4 |         12 |          0 |          4 |         16 |
+| src\icons\filters                                                                                                                              |          6 |         18 |          0 |          6 |         24 |
+| src\icons\player                                                                                                                               |          4 |         12 |          0 |          4 |         16 |
+| src\store                                                                                                                                      |          4 |         61 |          0 |         16 |         77 |
+| src\store (Files)                                                                                                                              |          3 |         26 |          0 |         11 |         37 |
+| src\store\slices                                                                                                                               |          1 |         35 |          0 |          5 |         40 |
+| src\styles                                                                                                                                     |          2 |         32 |          6 |         11 |         49 |
+| src\types                                                                                                                                      |          1 |         66 |          0 |         10 |         76 |
+| src\utils                                                                                                                                      |          1 |          7 |          0 |          2 |          9 |
++------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| filename                                                                                                                                       | language           | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| c:\Users\1more.attempt\Desktop\skilla-test-task\.env                                                                                           | Properties         |          2 |          0 |          0 |          2 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\README.md                                                                                      | Markdown           |         26 |          0 |         21 |         47 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\package-lock.json                                                                              | JSON               |     18,371 |          0 |          1 |     18,372 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\package.json                                                                                   | JSON               |         51 |          0 |          1 |         52 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\public\index.html                                                                              | HTML               |         17 |          0 |          2 |         19 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\public\manifest.json                                                                           | JSON               |         25 |          0 |          1 |         26 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\react-app-env.d.ts                                                                             | TypeScript         |          0 |          1 |          1 |          2 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\App.tsx                                                                                    | TypeScript JSX     |          5 |          0 |          1 |          6 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\api\api-url.ts                                                                             | TypeScript         |         19 |          1 |          2 |         22 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\api\api.ts                                                                                 | TypeScript         |         20 |          0 |          5 |         25 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\api\endpoints\callRecord.tsx                                                               | TypeScript JSX     |         18 |          0 |          2 |         20 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\api\endpoints\calls.tsx                                                                    | TypeScript JSX     |         90 |          1 |          5 |         96 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\api\endpoints\index.tsx                                                                    | TypeScript JSX     |          4 |          0 |          1 |          5 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\audio-player\audio-player-types.ts                                              | TypeScript         |          8 |          0 |          1 |          9 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\audio-player\audio-player.module.scss                                           | SCSS               |         77 |          0 |          7 |         84 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\audio-player\audio-player.tsx                                                   | TypeScript JSX     |         90 |          0 |          3 |         93 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\audio-player\useAudioPlayer.tsx                                                 | TypeScript JSX     |        123 |          0 |          9 |        132 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\avatar\avatar.module.scss                                                       | SCSS               |         24 |          0 |          4 |         28 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\avatar\avatar.tsx                                                               | TypeScript JSX     |         15 |          0 |          3 |         18 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\call-type\call-type.tsx                                                         | TypeScript JSX     |         18 |          0 |          2 |         20 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\date-separator\date-separator.module.scss                                       | SCSS               |         11 |          0 |          2 |         13 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\date-separator\date-separator.tsx                                               | TypeScript JSX     |         15 |          0 |          2 |         17 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\dropdowns\date-dropdown\date-dropdown.module.scss                               | SCSS               |          1 |          0 |          1 |          2 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\dropdowns\date-dropdown\date-dropdown.tsx                                       | TypeScript JSX     |         61 |          0 |          6 |         67 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\dropdowns\dropdown-reusable\custom-menu-items\date-range\date-range.module.scss | SCSS               |          0 |          0 |          1 |          1 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\dropdowns\dropdown-reusable\custom-menu-items\date-range\date-range.tsx         | TypeScript JSX     |         15 |          0 |          3 |         18 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\dropdowns\dropdown-reusable\dropdown.module.scss                                | SCSS               |         42 |          0 |          7 |         49 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\dropdowns\dropdown-reusable\dropdown.tsx                                        | TypeScript JSX     |         70 |          0 |          4 |         74 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\dropdowns\dropdown-reusable\types.tsx                                           | TypeScript JSX     |          8 |          0 |          2 |         10 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\dropdowns\dropdown-reusable\usage.tsx                                           | TypeScript JSX     |         37 |          0 |          7 |         44 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\dropdowns\type-dropdown\type-dropdown.module.scss                               | SCSS               |         56 |          0 |          7 |         63 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\dropdowns\type-dropdown\type-dropdown.tsx                                       | TypeScript JSX     |         58 |          0 |          6 |         64 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\filters-reseter\filter-reseter.module.scss                                      | SCSS               |         15 |          0 |          3 |         18 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\filters-reseter\filter-reseter.tsx                                              | TypeScript JSX     |         16 |          0 |          3 |         19 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\rating\rating.module.scss                                                       | SCSS               |         28 |          0 |          6 |         34 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\rating\rating.tsx                                                               | TypeScript JSX     |         20 |          0 |          4 |         24 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\table-filter\table-filter.module.scss                                           | SCSS               |         11 |          0 |          2 |         13 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\table-filter\table-filter.tsx                                                   | TypeScript JSX     |         42 |         29 |         11 |         82 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\table-header\table-header.module.scss                                           | SCSS               |         36 |          0 |          2 |         38 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\table-header\table-header.tsx                                                   | TypeScript JSX     |         32 |          0 |          4 |         36 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\table-row\table-row.module.scss                                                 | SCSS               |         59 |          0 |          3 |         62 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\table-row\table-row.tsx                                                         | TypeScript JSX     |         63 |          0 |          4 |         67 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\table-row\useCall.tsx                                                           | TypeScript JSX     |         52 |          0 |          2 |         54 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\table\table.module.scss                                                         | SCSS               |         14 |          0 |          2 |         16 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\table\table.tsx                                                                 | TypeScript JSX     |         26 |          0 |          3 |         29 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\table\useCalls.tsx                                                              | TypeScript JSX     |         16 |          0 |          6 |         22 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\constants.ts                                                                               | TypeScript         |         40 |          1 |          5 |         46 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\icons\calls\failed-call.svg                                                                | XML                |          3 |          0 |          1 |          4 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\icons\calls\incoming-call.svg                                                              | XML                |          3 |          0 |          1 |          4 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\icons\calls\missed-call.svg                                                                | XML                |          3 |          0 |          1 |          4 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\icons\calls\outgoing-call.svg                                                              | XML                |          3 |          0 |          1 |          4 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\icons\filters\arrow-down.svg                                                               | XML                |          3 |          0 |          1 |          4 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\icons\filters\arrow-left.svg                                                               | XML                |          3 |          0 |          1 |          4 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\icons\filters\arrow-right.svg                                                              | XML                |          3 |          0 |          1 |          4 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\icons\filters\arrow-up.svg                                                                 | XML                |          3 |          0 |          1 |          4 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\icons\filters\calendar.svg                                                                 | XML                |          3 |          0 |          1 |          4 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\icons\filters\reset-filters-icon.svg                                                       | XML                |          3 |          0 |          1 |          4 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\icons\no-avatar-icon.svg                                                                   | XML                |          3 |          0 |          1 |          4 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\icons\player\close-button.svg                                                              | XML                |          3 |          0 |          1 |          4 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\icons\player\download-button.svg                                                           | XML                |          3 |          0 |          1 |          4 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\icons\player\pause-button.svg                                                              | XML                |          3 |          0 |          1 |          4 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\icons\player\play-button.svg                                                               | XML                |          3 |          0 |          1 |          4 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\index.scss                                                                                 | SCSS               |          8 |          0 |          2 |         10 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\index.tsx                                                                                  | TypeScript JSX     |         18 |          0 |          2 |         20 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\store\redux-hooks.tsx                                                                      | TypeScript JSX     |          4 |          0 |          3 |          7 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\store\selector.ts                                                                          | TypeScript         |          3 |          0 |          4 |          7 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\store\slices\filters-slice.ts                                                              | TypeScript         |         35 |          0 |          5 |         40 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\store\store.ts                                                                             | TypeScript         |         19 |          0 |          4 |         23 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\styles\colors.scss                                                                         | SCSS               |         32 |          6 |         10 |         48 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\styles\typography.scss                                                                     | SCSS               |          0 |          0 |          1 |          1 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\types\api-types.ts                                                                         | TypeScript         |         66 |          0 |         10 |         76 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\src\utils\time-formater.ts                                                                     | TypeScript         |          7 |          0 |          2 |          9 |
+| c:\Users\1more.attempt\Desktop\skilla-test-task\tsconfig.json                                                                                  | JSON with Comments |         20 |          0 |          1 |         21 |
+| Total                                                                                                                                          |                    |     20,104 |         39 |        239 |     20,382 |
++------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+

@@ -1,0 +1,75 @@
+"filename", "language", "JSON with Comments", "TypeScript", "SCSS", "TypeScript JSX", "XML", "Markdown", "Properties", "JSON", "HTML", "comment", "blank", "total"
+"c:\Users\1more.attempt\Desktop\skilla-test-task\.env", "Properties", 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2
+"c:\Users\1more.attempt\Desktop\skilla-test-task\README.md", "Markdown", 0, 0, 0, 0, 0, 26, 0, 0, 0, 0, 21, 47
+"c:\Users\1more.attempt\Desktop\skilla-test-task\package-lock.json", "JSON", 0, 0, 0, 0, 0, 0, 0, 18371, 0, 0, 1, 18372
+"c:\Users\1more.attempt\Desktop\skilla-test-task\package.json", "JSON", 0, 0, 0, 0, 0, 0, 0, 51, 0, 0, 1, 52
+"c:\Users\1more.attempt\Desktop\skilla-test-task\public\index.html", "HTML", 0, 0, 0, 0, 0, 0, 0, 0, 17, 0, 2, 19
+"c:\Users\1more.attempt\Desktop\skilla-test-task\public\manifest.json", "JSON", 0, 0, 0, 0, 0, 0, 0, 25, 0, 0, 1, 26
+"c:\Users\1more.attempt\Desktop\skilla-test-task\react-app-env.d.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\App.tsx", "TypeScript JSX", 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 1, 6
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\api\api-url.ts", "TypeScript", 0, 19, 0, 0, 0, 0, 0, 0, 0, 1, 2, 22
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\api\api.ts", "TypeScript", 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 5, 25
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\api\endpoints\callRecord.tsx", "TypeScript JSX", 0, 0, 0, 18, 0, 0, 0, 0, 0, 0, 2, 20
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\api\endpoints\calls.tsx", "TypeScript JSX", 0, 0, 0, 90, 0, 0, 0, 0, 0, 1, 5, 96
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\api\endpoints\index.tsx", "TypeScript JSX", 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 1, 5
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\audio-player\audio-player-types.ts", "TypeScript", 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 1, 9
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\audio-player\audio-player.module.scss", "SCSS", 0, 0, 77, 0, 0, 0, 0, 0, 0, 0, 7, 84
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\audio-player\audio-player.tsx", "TypeScript JSX", 0, 0, 0, 90, 0, 0, 0, 0, 0, 0, 3, 93
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\audio-player\useAudioPlayer.tsx", "TypeScript JSX", 0, 0, 0, 123, 0, 0, 0, 0, 0, 0, 9, 132
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\avatar\avatar.module.scss", "SCSS", 0, 0, 24, 0, 0, 0, 0, 0, 0, 0, 4, 28
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\avatar\avatar.tsx", "TypeScript JSX", 0, 0, 0, 15, 0, 0, 0, 0, 0, 0, 3, 18
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\call-type\call-type.tsx", "TypeScript JSX", 0, 0, 0, 18, 0, 0, 0, 0, 0, 0, 2, 20
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\date-separator\date-separator.module.scss", "SCSS", 0, 0, 11, 0, 0, 0, 0, 0, 0, 0, 2, 13
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\date-separator\date-separator.tsx", "TypeScript JSX", 0, 0, 0, 15, 0, 0, 0, 0, 0, 0, 2, 17
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\dropdowns\date-dropdown\date-dropdown.module.scss", "SCSS", 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 2
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\dropdowns\date-dropdown\date-dropdown.tsx", "TypeScript JSX", 0, 0, 0, 61, 0, 0, 0, 0, 0, 0, 6, 67
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\dropdowns\dropdown-reusable\custom-menu-items\date-range\date-range.module.scss", "SCSS", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\dropdowns\dropdown-reusable\custom-menu-items\date-range\date-range.tsx", "TypeScript JSX", 0, 0, 0, 15, 0, 0, 0, 0, 0, 0, 3, 18
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\dropdowns\dropdown-reusable\dropdown.module.scss", "SCSS", 0, 0, 42, 0, 0, 0, 0, 0, 0, 0, 7, 49
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\dropdowns\dropdown-reusable\dropdown.tsx", "TypeScript JSX", 0, 0, 0, 70, 0, 0, 0, 0, 0, 0, 4, 74
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\dropdowns\dropdown-reusable\types.tsx", "TypeScript JSX", 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 2, 10
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\dropdowns\dropdown-reusable\usage.tsx", "TypeScript JSX", 0, 0, 0, 37, 0, 0, 0, 0, 0, 0, 7, 44
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\dropdowns\type-dropdown\type-dropdown.module.scss", "SCSS", 0, 0, 56, 0, 0, 0, 0, 0, 0, 0, 7, 63
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\dropdowns\type-dropdown\type-dropdown.tsx", "TypeScript JSX", 0, 0, 0, 58, 0, 0, 0, 0, 0, 0, 6, 64
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\filters-reseter\filter-reseter.module.scss", "SCSS", 0, 0, 15, 0, 0, 0, 0, 0, 0, 0, 3, 18
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\filters-reseter\filter-reseter.tsx", "TypeScript JSX", 0, 0, 0, 16, 0, 0, 0, 0, 0, 0, 3, 19
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\rating\rating.module.scss", "SCSS", 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 6, 34
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\rating\rating.tsx", "TypeScript JSX", 0, 0, 0, 20, 0, 0, 0, 0, 0, 0, 4, 24
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\table-filter\table-filter.module.scss", "SCSS", 0, 0, 11, 0, 0, 0, 0, 0, 0, 0, 2, 13
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\table-filter\table-filter.tsx", "TypeScript JSX", 0, 0, 0, 42, 0, 0, 0, 0, 0, 29, 11, 82
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\table-header\table-header.module.scss", "SCSS", 0, 0, 36, 0, 0, 0, 0, 0, 0, 0, 2, 38
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\table-header\table-header.tsx", "TypeScript JSX", 0, 0, 0, 32, 0, 0, 0, 0, 0, 0, 4, 36
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\table-row\table-row.module.scss", "SCSS", 0, 0, 59, 0, 0, 0, 0, 0, 0, 0, 3, 62
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\table-row\table-row.tsx", "TypeScript JSX", 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 4, 67
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\table-row\useCall.tsx", "TypeScript JSX", 0, 0, 0, 52, 0, 0, 0, 0, 0, 0, 2, 54
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\table\table.module.scss", "SCSS", 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 2, 16
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\table\table.tsx", "TypeScript JSX", 0, 0, 0, 26, 0, 0, 0, 0, 0, 0, 3, 29
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\components\table\useCalls.tsx", "TypeScript JSX", 0, 0, 0, 16, 0, 0, 0, 0, 0, 0, 6, 22
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\constants.ts", "TypeScript", 0, 40, 0, 0, 0, 0, 0, 0, 0, 1, 5, 46
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\icons\calls\failed-call.svg", "XML", 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 1, 4
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\icons\calls\incoming-call.svg", "XML", 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 1, 4
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\icons\calls\missed-call.svg", "XML", 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 1, 4
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\icons\calls\outgoing-call.svg", "XML", 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 1, 4
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\icons\filters\arrow-down.svg", "XML", 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 1, 4
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\icons\filters\arrow-left.svg", "XML", 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 1, 4
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\icons\filters\arrow-right.svg", "XML", 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 1, 4
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\icons\filters\arrow-up.svg", "XML", 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 1, 4
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\icons\filters\calendar.svg", "XML", 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 1, 4
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\icons\filters\reset-filters-icon.svg", "XML", 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 1, 4
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\icons\no-avatar-icon.svg", "XML", 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 1, 4
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\icons\player\close-button.svg", "XML", 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 1, 4
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\icons\player\download-button.svg", "XML", 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 1, 4
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\icons\player\pause-button.svg", "XML", 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 1, 4
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\icons\player\play-button.svg", "XML", 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 1, 4
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\index.scss", "SCSS", 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 2, 10
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\index.tsx", "TypeScript JSX", 0, 0, 0, 18, 0, 0, 0, 0, 0, 0, 2, 20
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\store\redux-hooks.tsx", "TypeScript JSX", 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 3, 7
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\store\selector.ts", "TypeScript", 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 4, 7
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\store\slices\filters-slice.ts", "TypeScript", 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 5, 40
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\store\store.ts", "TypeScript", 0, 19, 0, 0, 0, 0, 0, 0, 0, 0, 4, 23
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\styles\colors.scss", "SCSS", 0, 0, 32, 0, 0, 0, 0, 0, 0, 6, 10, 48
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\styles\typography.scss", "SCSS", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\types\api-types.ts", "TypeScript", 0, 66, 0, 0, 0, 0, 0, 0, 0, 0, 10, 76
+"c:\Users\1more.attempt\Desktop\skilla-test-task\src\utils\time-formater.ts", "TypeScript", 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 2, 9
+"c:\Users\1more.attempt\Desktop\skilla-test-task\tsconfig.json", "JSON with Comments", 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 21
+"Total", "-", 20, 217, 414, 916, 45, 26, 2, 18447, 17, 39, 239, 20382
