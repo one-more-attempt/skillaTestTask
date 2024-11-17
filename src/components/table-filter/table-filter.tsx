@@ -35,41 +35,13 @@ export const TableFilter: FC = () => {
     );
   };
 
-  // const typeFilterMenuItems = [
-  //   { id: 0, label: "Все типы", onClick: selectAllCallTypes },
-  //   { id: 1, label: "Входящие", onClick: selectIncomingCallTypes },
-  //   { id: 2, label: "Исходящие", onClick: selectOutgoingCallTypes },
-  // ];
-
-  const handleAllClick = () => {
-    console.log("Выбрано: Все типы");
-  };
-
-  const handleIncomingClick = () => {
-    console.log("Выбрано: Входящие");
-  };
-
-  const handleOutgoingClick = () => {
-    console.log("Выбрано: Исходящие");
-  };
-
-  const handleDateRangeClick = () => {
-    console.log("Дата диапазон установлен");
-  };
-
   const menuItems = [
-    { id: 0, label: "Все типы", onClick: handleAllClick },
-    { id: 1, label: "Входящие", onClick: handleIncomingClick },
+    { id: 0, label: "Все типы", onClick: selectAllCallTypes },
+    { id: 1, label: "Входящие", onClick: selectIncomingCallTypes },
     {
       id: 2,
       label: "Исходящие",
-      onClick: handleOutgoingClick,
-    },
-    {
-      id: 3,
-      label: "custom",
-      customContent: <DateRangeContent />,
-      onClick: handleDateRangeClick,
+      onClick: selectOutgoingCallTypes,
     },
   ];
 
@@ -77,8 +49,6 @@ export const TableFilter: FC = () => {
     <div className={styles.filterRow}>
       <Dropdown items={menuItems} />
       {!isDefaultSort && <FilterReseter onClick={handleResetFilters} />}
-      {/* {/* <TypeDropdown items={typeFilterMenuItems} /> */}
-  
     </div>
   );
 };
