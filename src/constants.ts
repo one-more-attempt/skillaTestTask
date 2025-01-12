@@ -7,12 +7,14 @@ export enum CallStatusEnum {
   Success = "Дозвонился",
   Failed = "Не дозвонился",
 }
+
 export enum CallTypeEnum {
   Incoming = "incoming",
   Outgoing = "outgoing",
   Missed = "missed",
   Failed = "failed",
 }
+
 export enum CallRatingEnum {
   Perfect = "Отлично",
   Good = "Хорошо",
@@ -35,10 +37,12 @@ export enum CallsTypeParamsEnum {
   Incoming = 1,
   Outgoing = 0,
 }
+
 export enum CallsSortParamsEnum {
   Date = "date",
   Duration = "duration",
 }
+
 export enum CallsOrderParamsEnum {
   ASC = "ASC",
   DESC = "DESC",

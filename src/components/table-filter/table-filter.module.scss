@@ -9,4 +9,10 @@
   color: $text-secondary;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  
+  .callTypes {
+    display: flex;
+    gap: 20px;
+  }
 }

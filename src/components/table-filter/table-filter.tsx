@@ -1,13 +1,14 @@
-import { CallsTypeParamsEnum, CallTypeEnum } from "../../constants";
+import moment from "moment";
+import { CallsTypeParamsEnum } from "../../constants";
 import { useAppDispatch, useAppSelector } from "../../store/redux-hooks";
 import { filterSliceData } from "../../store/selector";
 import { filterSliceActions } from "../../store/slices/filters-slice";
 import { DateRangeContent } from "../dropdowns/dropdown-reusable/custom-menu-items/date-range/date-range";
 import { Dropdown } from "../dropdowns/dropdown-reusable/dropdown";
-import { TypeDropdown } from "../dropdowns/type-dropdown/type-dropdown";
 import { FilterReseter } from "../filters-reseter/filter-reseter";
 import styles from "./table-filter.module.scss";
 import { FC } from "react";
+import { FormatByDateType, getFormatedDate } from "../../utils/time-formater";
 
 export const TableFilter: FC = () => {
   const dispatch = useAppDispatch();
@@ -35,7 +36,7 @@ export const TableFilter: FC = () => {
     );
   };
 
-  const menuItems = [
+  const callTypeFilterItems = [
     { id: 0, label: "Все типы", onClick: selectAllCallTypes },
     { id: 1, label: "Входящие", onClick: selectIncomingCallTypes },
     {
@@ -45,10 +46,55 @@ export const TableFilter: FC = () => {
     },
   ];
 
+  ////////////////////////////////////////////////////////////////////////////////
+  const applyDateFilter = ({ type, val }: FormatByDateType) => {
+    dispatch(
+      filterSliceActions.setFilter({
+        ...filters,
+        date_start: getFormatedDate.byDateType({ type, val }),
+        date_end: getFormatedDate.currentDate(),
+      })
+    );
+  };
+
+  const dateFilterMenuItems = [
+    {
+      id: 0,
+      label: "3 дня",
+      onClick: () => applyDateFilter({ type: "days", val: 3 }),
+    },
+    {
+      id: 1,
+      label: "Неделя",
+      onClick: () => applyDateFilter({ type: "week" }),
+    },
+    {
+      id: 2,
+      label: "Месяц",
+      onClick: () => applyDateFilter({ type: "month" }),
+    },
+    {
+      id: 3,
+      label: "Год",
+      onClick: () => applyDateFilter({ type: "year" }),
+    },
+    {
+      id: 4,
+      label: "Указать диапазон",
+      onClick: () => {
+        console.log("работает но нет доступа в компонент DateRangeContent");
+      },
+      customContent: <DateRangeContent />,
+    },
+  ];
+
   return (
     <div className={styles.filterRow}>
-      <Dropdown items={menuItems} />
-      {!isDefaultSort && <FilterReseter onClick={handleResetFilters} />}
+      <div className={styles.callTypes}>
+        <Dropdown items={callTypeFilterItems} />
+        {!isDefaultSort && <FilterReseter onClick={handleResetFilters} />}
+      </div>
+      <Dropdown items={dateFilterMenuItems} alignRight />
     </div>
   );
 };

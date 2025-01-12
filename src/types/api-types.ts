@@ -14,7 +14,7 @@ export type CallListSearchParams = {
   order?: CallsOrderParamsEnum;
   date_start?: string;
   date_end?: string;
-  limit: string;
+  limit?: string;
 };
 
 export type Call = {

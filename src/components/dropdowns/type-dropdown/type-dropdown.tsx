@@ -3,6 +3,7 @@ import styles from "./type-dropdown.module.scss";
 import { ReactComponent as ArrowUp } from "../../../icons/filters/arrow-up.svg";
 import { ReactComponent as ArrowDown } from "../../../icons/filters/arrow-down.svg";
 import classNames from "classnames";
+
 type TypeDropdownMenuItem = {
   id: number;
   label: string;
