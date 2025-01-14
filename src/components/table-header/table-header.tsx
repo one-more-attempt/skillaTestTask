@@ -13,7 +13,6 @@ type Props = {};
 export const TableHeader: FC<Props> = () => {
   const dispatch = useAppDispatch();
   const {
-    isDefaultSort,
     filters,
     filters: { sort_by, order },
   } = useAppSelector(filterSliceData);
@@ -42,24 +41,21 @@ export const TableHeader: FC<Props> = () => {
       })
     );
   };
+
   return (
     <div className={styles.row}>
       <div className={styles.callType}>
         <span>Тип</span>
       </div>
-      <div
-        onClick={setSortByDate}
-        className={classNames(styles.time, {
-          [styles.active]: sort_by === CallsSortParamsEnum.Date,
-        })}
-      >
+      <div onClick={setSortByDate} className={styles.time}>
         <span>Время</span>
-        {sort_by === CallsSortParamsEnum.Date &&
-        order === CallsOrderParamsEnum.DESC ? (
-          <ArrowDown />
-        ) : (
-          <ArrowUp />
-        )}
+        {sort_by === CallsSortParamsEnum.Date ? (
+          order === CallsOrderParamsEnum.DESC ? (
+            <ArrowDown />
+          ) : (
+            <ArrowUp />
+          )
+        ) : null}
       </div>
       <div className={styles.employee}>Сотрудник</div>
       <span className={styles.call}>Звонок</span>
@@ -67,15 +63,16 @@ export const TableHeader: FC<Props> = () => {
       <div className={styles.rating}>
         <span>Оценка</span>
       </div>
-      <div
-        onClick={setSortByDuration}
-        className={classNames(styles.duration, {
-          [styles.active]: sort_by === CallsSortParamsEnum.Duration,
-        })}
-      >
+      <div onClick={setSortByDuration} className={styles.duration}>
         <span>Длительность</span>
 
-        <ArrowUp />
+        {sort_by === CallsSortParamsEnum.Duration ? (
+          order === CallsOrderParamsEnum.DESC ? (
+            <ArrowDown />
+          ) : (
+            <ArrowUp />
+          )
+        ) : null}
       </div>
     </div>
   );

@@ -6,16 +6,13 @@
 
   .dropdownTitle {
     background-color: inherit;
-    color: $text-secondary;
+    color: $dropdown-title;
     border: none;
     cursor: pointer;
     font-size: 14px;
     line-height: 20px;
     display: flex;
     align-items: center;
-  }
-  .titleActive {
-    color: $dropdown-selected-item;
   }
   .arrowIcon {
     color: $dropdown-icons;
