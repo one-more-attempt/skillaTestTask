@@ -1,6 +1,5 @@
 import moment from "moment";
 
-
 export const timeFormat = {
   secondsToMinSec: (timeValue: number | string) =>
     moment
@@ -8,12 +7,15 @@ export const timeFormat = {
       .format("m:ss"),
 };
 
-export type FormatByDateType = {
+export type SubtractByDateType = {
   type: "days" | "week" | "month" | "year";
   val?: number;
 };
 export const getFormatedDate = {
   currentDate: () => moment().format("YYYY-MM-DD"),
-  byDateType: ({ type, val }: FormatByDateType) => 
-    moment().subtract(val ?? 1, type).format("YYYY-MM-DD"),
+  format: (arg: string) => moment(arg).format("YYYY-MM-DD"),
+  subtractByDateType: ({ type, val }: SubtractByDateType) =>
+    moment()
+      .subtract(val ?? 1, type)
+      .format("YYYY-MM-DD"),
 };

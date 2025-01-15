@@ -15,7 +15,7 @@ const initialState: FilterStateType = {
     in_out: undefined,
     sort_by: CallsSortParamsEnum.Date,
     order: CallsOrderParamsEnum.DESC,
-    date_start: getFormatedDate.byDateType({ type: "days", val: 2 }),
+    date_start: getFormatedDate.subtractByDateType({ type: "days", val: 2 }),
     date_end: getFormatedDate.currentDate(),
     limit: "100",
   },
