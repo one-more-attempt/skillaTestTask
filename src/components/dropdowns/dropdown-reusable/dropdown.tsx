@@ -34,13 +34,15 @@ export const Dropdown: FC<DropdownProps> = ({ items, alignRight }) => {
     };
 
     const menuContent = item.customContent ? (
-      cloneElement(item.customContent, {
-        onClick: handleClick,
-      })
+      <>
+        {item.label}
+        {cloneElement(item.customContent, {
+          onClick: handleClick,
+        })}
+      </>
     ) : (
       <span>{item.label}</span>
     );
-
     return (
       <div
         key={item.id}
@@ -57,10 +59,12 @@ export const Dropdown: FC<DropdownProps> = ({ items, alignRight }) => {
   return (
     <div className={styles.dropdownContainer}>
       <button onClick={toggleDropdown} className={styles.dropdownTitle}>
-        <span>
-          {items.find((item) => item.id === activeItemId)?.label ||
-            defaultLabel}
-        </span>
+        <div>
+          <span>
+            {items.find((item) => item.id === activeItemId)?.label ||
+              defaultLabel}
+          </span>
+        </div>
         {isOpen ? (
           <ArrowUp className={classNames(styles.arrowIcon, styles.active)} />
         ) : (

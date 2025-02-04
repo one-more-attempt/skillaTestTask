@@ -1,7 +1,6 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { CallListSearchParams } from "../../types/api-types";
 import { CallsOrderParamsEnum, CallsSortParamsEnum } from "../../constants";
-import moment from "moment";
 import { getFormatedDate } from "../../utils/time-formater";
 
 export type FilterStateType = {

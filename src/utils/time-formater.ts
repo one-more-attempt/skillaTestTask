@@ -14,6 +14,7 @@ export type SubtractByDateType = {
 export const getFormatedDate = {
   currentDate: () => moment().format("YYYY-MM-DD"),
   format: (arg: string) => moment(arg).format("YYYY-MM-DD"),
+  calendar: (arg: string) => moment(arg).format("DD.MM.YYYY"),
   subtractByDateType: ({ type, val }: SubtractByDateType) =>
     moment()
       .subtract(val ?? 1, type)
