@@ -17,6 +17,7 @@ export const Dropdown: FC<DropdownProps> = ({ items, alignRight }) => {
   const defaultLabel = items[0].id;
   const [isOpen, setIsOpen] = useState(false);
   const [activeItemId, setActiveItemId] = useState(defaultLabel);
+  const activeItem = items.find((item) => item.id === activeItemId);
 
   useEffect(() => {
     if (isDefaultSort) {
@@ -59,12 +60,8 @@ export const Dropdown: FC<DropdownProps> = ({ items, alignRight }) => {
   return (
     <div className={styles.dropdownContainer}>
       <button onClick={toggleDropdown} className={styles.dropdownTitle}>
-        <div>
-          <span>
-            {items.find((item) => item.id === activeItemId)?.label ||
-              defaultLabel}
-          </span>
-        </div>
+        {activeItem?.icon}
+        <span>{activeItem?.label || defaultLabel}</span>
         {isOpen ? (
           <ArrowUp className={classNames(styles.arrowIcon, styles.active)} />
         ) : (
