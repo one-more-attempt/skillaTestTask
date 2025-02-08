@@ -8,6 +8,7 @@ import { CallTypeEnum } from "../../constants";
 type Props = {
   type: CallTypeEnum;
 };
+
 export const CallTypeIcons: FC<Props> = ({ type }: Props) => {
   const imgSrc = {
     [CallTypeEnum.Incoming]: <IncomingCallIcon />,

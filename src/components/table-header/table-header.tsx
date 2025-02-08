@@ -8,9 +8,7 @@ import classNames from "classnames";
 import { CallsOrderParamsEnum, CallsSortParamsEnum } from "../../constants";
 import { filterSliceActions } from "../../store/slices/filters-slice";
 
-type Props = {};
-
-export const TableHeader: FC<Props> = () => {
+export const TableHeader: FC = () => {
   const dispatch = useAppDispatch();
   const {
     filters,

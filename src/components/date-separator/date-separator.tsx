@@ -1,4 +1,6 @@
+import { FC } from "react";
 import styles from "./date-separator.module.scss";
+
 type Props = {
   data: {
     date: string;
@@ -6,7 +8,7 @@ type Props = {
   };
 };
 
-export const DateSeparator = ({ data: { date, count } }: Props) => {
+export const DateSeparator: FC<Props> = ({ data: { date, count } }) => {
   return (
     <div className={styles.dateSeparator} key={date}>
       <span>{date}</span>

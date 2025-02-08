@@ -14,6 +14,7 @@ export const useCall = (callData: CallViewItem) => {
     source,
     avatar,
   } = callData;
+  
   const [isRowFocused, setIsRowFocused] = useState(false);
   const [
     getRecordTrigger,
@@ -34,6 +35,7 @@ export const useCall = (callData: CallViewItem) => {
     }
   };
   const isPlayerVisible = !!record && (isRowFocused || isRecordDownloaded);
+  
   return {
     callType,
     callNumber,

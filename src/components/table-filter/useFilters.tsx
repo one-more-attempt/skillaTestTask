@@ -25,6 +25,7 @@ export const useFilters = () => {
       })
     );
   };
+
   const selectOutgoingCallTypes = () => {
     dispatch(
       filterSliceActions.setFilter({
@@ -53,6 +54,7 @@ export const useFilters = () => {
       })
     );
   };
+  
   const dateFilterMenuItems: MenuItem[] = [
     {
       id: 0,

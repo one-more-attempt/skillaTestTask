@@ -11,6 +11,7 @@ export type SubtractByDateType = {
   type: "days" | "week" | "month" | "year";
   val?: number;
 };
+
 export const getFormatedDate = {
   currentDate: () => moment().format("YYYY-MM-DD"),
   format: (arg: string) => moment(arg).format("YYYY-MM-DD"),
