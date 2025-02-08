@@ -1,4 +1,4 @@
-import { cloneElement, FC, useEffect, useState } from "react";
+import { cloneElement, FC, useEffect, useRef, useState } from "react";
 import styles from ".//dropdown.module.scss";
 import classNames from "classnames";
 import { MenuItem } from "./types";
@@ -18,12 +18,31 @@ export const Dropdown: FC<DropdownProps> = ({ items, alignRight }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeItemId, setActiveItemId] = useState(defaultLabel);
   const activeItem = items.find((item) => item.id === activeItemId);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (isDefaultSort) {
       setActiveItemId(defaultLabel);
     }
   }, [isDefaultSort]);
+
+  //close menu if clicked outside of dropdown
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isOpen]);
+
   const toggleDropdown = () => {
     setIsOpen((prev) => !prev);
   };
@@ -58,7 +77,7 @@ export const Dropdown: FC<DropdownProps> = ({ items, alignRight }) => {
   };
 
   return (
-    <div className={styles.dropdownContainer}>
+    <div className={styles.dropdownContainer} ref={dropdownRef}>
       <button onClick={toggleDropdown} className={styles.dropdownTitle}>
         {activeItem?.icon}
         <span>{activeItem?.label || defaultLabel}</span>
